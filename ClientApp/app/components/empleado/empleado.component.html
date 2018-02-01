@@ -1,0 +1,26 @@
+﻿<h1>Empleados</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!empleados"><em>Loading...</em></p>
+
+<table class="table" *ngIf="empleados">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Teléfono</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let empleado of empleados">
+        <td>{{ empleado.nombre }}</td>
+        <td>{{ empleado.apellido }}</td>
+        <td>{{ empleado.telefono }}</td>
+        <td>{{ empleado.email }}</td>
+    </tr>
+    </tbody>
+</table>
+
+<button (click)="agregarEmpleado()">Agregar</button>
